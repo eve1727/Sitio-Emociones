@@ -1,0 +1,369 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #f6f8fb;
+}
+
+#inicio p{/*Posicionamiento de barra de navegacion*/
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+#proceso{
+      margin-left: 45%;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      color: #bf5c54;
+
+}
+
+#inicio p a{/*Estilos de los links de la barra de navegacion*/
+    margin-top: 15px;
+    font-weight: 300;
+    margin-left: 40px;
+    font-size: 170%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.5s;
+    color: #000000;
+    text-decoration: none;
+}
+
+#inicio p a:hover {
+    color: #e89189;
+    cursor: pointer;
+ }
+
+
+#encabezado{/*Estilo del encabezado*/
+    background-size: cover;
+    background-position-y:70%; 
+    height:300px;
+    opacity: 95%;
+    transform: translateY(2.5%);
+    z-index: 100;
+}
+
+#encabezado h2{/*Estilo del texto del encabezado*/
+      font-weight: 300;
+      transform: translateY(120px);
+      margin-left: 10%;
+      font-size: 210%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#hr{
+   margin-top: 1%;
+}
+
+#dos_partes{/*Propiedad del div ara poner frase a un lado de elegir emocion*/
+    display: flex;
+}
+
+ #contenedor{/*Estilo del contenedor principal*/
+    border-radius:18px; 
+    box-shadow:15px 19px 16px #0c0d1114; 
+    padding:22px; 
+    margin-bottom:18px;
+    height: 490px;
+    width: 800px;
+    background-color: #ffffff;
+    margin-top: 5%;
+ }
+
+ #QueEmocion{/*Estilo del texto de elegir emocion*/
+   font-family: "Lato", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+   font-size: 170%;
+   margin-left: 30%;
+}
+
+
+ #contenedor2{/*Estilo del contenedor de los botones de las emociones*/
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+ }
+
+ #contenedor3{/*Estilo del contenedor de los botones de las emociones segunda fila*/
+    display: flex;
+    margin-left: 5%;
+ }
+
+
+
+  /*Ocultar la forma de los botones radio*/
+.no_radio{
+    display: none;
+  }
+  
+ /*Estilos para cada circulo de la emocion*/
+  .todos_circulo {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ;
+    background-color: #F9E784;
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+  }
+  
+  .todos_circulo:hover{
+    border-color: #007bff; 
+    background-color: #e6f7ff; 
+    transform: scale(1.05);
+  }
+
+
+  /*Estilos para cada boton de emocion*/
+
+ #emojiFeli{
+    font-size: 30px;
+    transform: translateX(5px);
+ }
+
+  #acomodoFeli{
+    margin-left: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ 
+ #emojiEmocionado{
+    font-size: 30px;
+    transform: translateX(32px);
+ }
+
+ #acomodoEmocionado{
+    margin-left: -6px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+
+ #emojiCalmado{
+    font-size: 30px;
+    transform: translateX(23px);
+ }
+
+ #acomodoCalmado{
+    margin-left: 5px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ #emojiCansado{
+    font-size: 30px;
+    transform: translateX(23px);
+ }
+
+ #acomodoCansado{
+    margin-left: 5px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+
+ #emojiNeutral{
+    font-size: 30px;
+    transform: translateX(16px);
+ }
+
+ #acomodoNeutral{
+    margin-left: 12px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+
+ #emojiEnojado{
+    font-size: 30px;
+    transform: translateX(16px);
+ }
+
+ #acomodoEnojado{
+    margin-left: 12px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ #emojiTriste{
+    font-size: 30px;
+    transform: translateX(9px);
+ }
+
+ #acomodoTriste{
+    margin-left: 18px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ #emojiAnsioso{
+    font-size: 30px;
+    transform: translateX(16px);
+ }
+
+ #acomodoAnsioso{
+    margin-left: 12px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ #emojiConfundido{
+    font-size: 30px;
+    transform: translateX(30px);
+ }
+
+ #acomodoConfundido{
+    margin-left: -2px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+ #emojiPensativo{
+    font-size: 30px;
+    transform: translateX(25px);
+ }
+
+ #acomodoPensativo{
+    margin-left: 3px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    align-items: center;
+ }
+
+
+ /*--Boton de enviar en elegir emociones--*/
+ #enviar{
+    border:1px solid #353434; 
+    cursor:pointer;
+    padding:10px 14px; 
+    border-radius:10px; 
+    font-weight:400;
+    font-size: 100%;
+    background-color: #ffffff;
+    font-family: "Lato", sans-serif;
+    margin-top: 5%;
+    margin-left: 40%;
+    transition: all 0.3s;
+ }
+
+ #enviar:hover{
+   background-color: #cb748e;
+   color: #ffffff;
+   border:1px solid #fbfbfb; 
+}
+
+
+#frase_contenedor{/*Estilo del contenedor de la frase*/
+    border-radius:10px; 
+    border: 2px solid #d2aba7;
+    box-shadow:15px 19px 16px #0c0d1114; 
+    padding:25px; 
+    color: #b88580;
+    background-color: #ffff;
+    width: 80%;
+    height: 30px;
+    margin-top: 13%;
+    margin-left: 3%;
+}
+
+#frase_contenedor h3{/*Estilo de "Frase" de la frase*/
+    text-align: center;
+    transform: translateY(-80%);
+    font-family: "Lato", sans-serif;
+    font-size: 170%;
+    font-weight: 300;
+}
+ 
+#frase{/*Estilo de la frase */
+    border-radius:18px; 
+    box-shadow:15px 19px 16px #0c0d1114; 
+    padding:25px; 
+    background-color: #ffffff;
+    width: 80%;
+    font-family: "Lato", sans-serif;
+    font-size: 120%;
+    height: 110px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+
+ /*-- FOOTERS --*/
+
+ .foot{/*Estilo del footer*/
+    background-color: #ece5e5;
+    padding: 10px;
+    margin-top: 60%;
+    height: 200px;
+    width: 100%;
+    margin-bottom: -10%;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+
+  #seccion1{/*Estilo de la primera seccion del footer*/
+    display: inline-block;
+    margin-right: 30%;
+    margin-left: 2%;
+    text-align: left;
+  }
+
+  #seccion2{/*Estilo de la segunda seccion del footer*/
+    display: flex;
+  }
+
+  .espacio{/*Clase para dar espacio entre los links del footer*/
+    transform: translateX(20px);
+  }
+
+  .espacio2{
+    transform: translateX(60px);
+  }
+  
+
+  #privacidad{
+    display: inline-table;
+  }
+
+  .footer_links{/*Estilo de los links del footer*/
+    text-decoration: none;
+    color:#1f2d3d;
+    transition: all 0.3s;
+  }
+
+  .footer_links:hover{
+     color: #bf5c54;
+  }
