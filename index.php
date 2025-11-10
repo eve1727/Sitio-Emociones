@@ -23,23 +23,53 @@
 
     <header id="encabezado">
         <h2>¡Hola! <br>
-            Bienvenid@ a MyEmotions</h2>
+            Bienvenid@ a El Faro Emocional</h2>
     </header>
     <hr id="hr">
 
 <div id="dos_partes"><!-- Contenedor para poner frase a un lado de elegir emocion-->
 
+
  <div id="contenedor"><!--Contenedor de elegir una emocion-->
 
     <form method="POST">
+
    
       <h2 id="QueEmocion">¿Cómo te sientes ahora?</h2>
 
-      <p id="proceso">(Edit: En proceso)</p>
+      <div class="opciones">
+
+      <!--Parte de php para guardar la emocion y mostrar mensaje de que se guardo-->
+<?php
+
+require_once "conexion2.php";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $emocion  = $_POST['sentimiento'];
+//Recivimos la emocion que selecciono el usuario    
+
+  $sql ="INSERT INTO diario (Emocion,fecha) VALUES (?, CURRENT_TIMESTAMP)";//Hacemos la consulta para insertar la emocion y la fecha actual
+
+  $prepara = $conn->prepare($sql);
+
+  if(!$prepara) {//Por si la consulta falla
+     die ("Error al preparar la consulta: " .$conn->error);
+    }else{
+    $prepara->bind_param("s", $emocion);//Conectamos la variable del usuario con la de la base de datos
+    if ($prepara->execute()) {
+        echo "<h2 class='mensajeExito'>Estado de animo guardado ✅ </h2>";
+    }else{
+        die ("No se pudo ejecutar la sentencia");
+    }
+  }
+}
+
+?>
+
          <div id=contenedor2><!--Contenedor de las 5 primeras emociones-->
 
         <!-- Opción Feliz -->
-        <input type="radio" name="feliz" class="no_radio" >
+        <input type="radio" name="sentimiento" id="feliz" value="feliz" >
         <label for="feliz" class="todos_circulo" style="background-color: #FEF9C3;">
         <div id="acomodoFeli">
           <div id="emojiFeli">☺️</div>
@@ -48,8 +78,8 @@
         </label>
 
         <!-- Opción Emocionada -->
-        <input type="radio" name="emocionado" class="no_radio">
-        <label for="emocionado" class="todos_circulo" style="background-color: #FFEDD6;">
+        <input type="radio" name="sentimiento" id="emocionada" value ="emocionada">
+        <label for="emocionada" class="todos_circulo" style="background-color: #FFEDD6;">
         <div id="acomodoEmocionado">
           <div id="emojiEmocionado">🤩</div>
           <p>Emocionada</p>
@@ -57,8 +87,8 @@
         </label>
 
         <!-- Opción Calmada -->
-        <input type="radio" name="calmado" class="no_radio">
-        <label for="calmado" class="todos_circulo" style="background-color: #DCFCE6;">
+        <input type="radio" name="sentimiento" id="calmada" value ="calmada">
+        <label for="calmada" class="todos_circulo" style="background-color: #DCFCE6;">
         <div id="acomodoCalmado">
           <div id="emojiCalmado">🙃</div>
           <p>Calmada</p>
@@ -66,8 +96,8 @@
         </label>
 
         <!-- Opción Cansada -->
-        <input type="radio" name="cansado" class="no_radio">
-        <label for="cansado" class="todos_circulo" style="background-color: #DBE9FE;">
+        <input type="radio" name="sentimiento" id="cansada" value ="cansada">
+        <label for="cansada" class="todos_circulo" style="background-color: #DBE9FE;">
             <div id="acomodoCansado">
           <div id="emojiCansado">😴</div>
           <p>Cansada</p>
@@ -76,7 +106,7 @@
 
          
         <!-- Opción Neutral -->
-        <input type="radio" name="neutral" class="no_radio">
+        <input type="radio" name="sentimiento" id="neutral" value ="neutral" >
         <label for="neutral" class="todos_circulo" style="background-color:#F3F4F6;">
             <div id="acomodoNeutral">
           <div id="emojiNeutral">🥱</div>
@@ -90,8 +120,8 @@
 <div id="contenedor3"><!--Contenedor de las 5 siguientes emociones-->
     
      <!-- Opción Enojada -->
-    <input type="radio" name="neutral" class="no_radio">
-    <label for="neutral" class="todos_circulo" style="background-color:#FBE7F3;">
+    <input type="radio" name="sentimiento" id="enojada" value ="enojada">
+    <label for="enojada" class="todos_circulo" style="background-color:#FBE7F3;">
         <div id="acomodoEnojado">
       <div id="emojiEnojado">😠</div>
       <p>Enojada</p>
@@ -99,8 +129,8 @@
     </label>
 
      <!-- Opción Triste -->
-    <input type="radio" name="neutral" class="no_radio">
-    <label for="neutral" class="todos_circulo" style="background-color:#DBE9FE;">
+    <input type="radio" name="sentimiento" id="triste" value ="triste">
+    <label for="triste" class="todos_circulo" style="background-color:#DBE9FE;">
         <div id="acomodoTriste">
       <div id="emojiTriste">😢</div>
       <p>Triste</p>
@@ -109,8 +139,8 @@
 
 
     <!-- Opción Ansiosa -->
-    <input type="radio" name="neutral" class="no_radio">
-    <label for="neutral" class="todos_circulo" style="background-color:#F3E7FF;">
+    <input type="radio" name="sentimiento" id="ansiosa" value ="ansiosa">
+    <label for="ansiosa" class="todos_circulo" style="background-color:#F3E7FF;">
         <div id="acomodoAnsioso">
       <div id="emojiAnsioso">😬</div>
       <p>Ansiosa</p>
@@ -118,8 +148,8 @@
     </label>
 
     <!-- Opción Confundida -->
-    <input type="radio" name="neutral" class="no_radio">
-    <label for="neutral" class="todos_circulo" style="background-color:#FFEDD6;">
+    <input type="radio" name="sentimiento" id="confundida" value ="confundida">
+    <label for="confundida" class="todos_circulo" style="background-color:#FFEDD6;">
         <div id="acomodoConfundido">
       <div id="emojiConfundido">🤨</div>
       <p>Confundida</p>
@@ -128,8 +158,8 @@
 
 
     <!-- Opción Pensativa -->
-    <input type="radio" name="neutral" class="no_radio">
-    <label for="neutral" class="todos_circulo" style="background-color:#CBFBF2;">
+    <input type="radio" name="sentimiento" id="pensativa" value ="pensativa">
+    <label for="pensativa" class="todos_circulo" style="background-color:#CBFBF2;">
         <div id="acomodoPensativo">
       <div id="emojiPensativo">🤔</div>
       <p>Pensativa</p>
@@ -141,21 +171,12 @@
   
 <input type="submit" value="Guardar estado" id="enviar">
 
+
+
 </form>
 </div><!--Fin contenedor elegir emocion-->
 
-  <div style="dysplay:flex"><!--Contenedor de la frase del dia-->
-  
-    <div id="frase_contenedor">
-     <h3>Frase del día</h3>
-    </div>
-
-    <div id="frase">
-     <p>"Que tu autoexigencia no te impida disfrutar de todo lo que lograste"</p>
-     <p>anonimo.</p>
-   </div>
-
-</div><!--Fin contenedor de la frase del dia-->
+</div>
 
 </div><!--Fin contenedor de  las dos partes-->
 

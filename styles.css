@@ -55,16 +55,13 @@ body{
    margin-top: 1%;
 }
 
-#dos_partes{/*Propiedad del div ara poner frase a un lado de elegir emocion*/
-    display: flex;
-}
 
  #contenedor{/*Estilo del contenedor principal*/
     border-radius:18px; 
     box-shadow:15px 19px 16px #0c0d1114; 
     padding:22px; 
     margin-bottom:18px;
-    height: 490px;
+    height: 520px;
     width: 800px;
     background-color: #ffffff;
     margin-top: 5%;
@@ -90,15 +87,24 @@ body{
     margin-left: 5%;
  }
 
+/*Quitar el circulo del boton de radio a cada boton*/
+.opciones input[type="radio"] {
+   position: absolute;
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
 
+/*Estilos para el boton que seleccione el usuario, utilizamos el checked indicando que solo al boton que elijan*/
+.opciones input[type="radio"]:checked + .todos_circulo {
+   background-color: #e6f7ff; 
+   border-color: #007bff;
+   box-shadow: 0 0 15px #4e92db4d;
+   transform: scale(1.05); 
+}
 
-  /*Ocultar la forma de los botones radio*/
-.no_radio{
-    display: none;
-  }
-  
- /*Estilos para cada circulo de la emocion*/
-  .todos_circulo {
+/*Estilos para cada circulo de la emocion*/
+.todos_circulo {
     display: flex;
     padding: 20px;
     border: 1px solid #cccccc;
@@ -111,14 +117,14 @@ body{
     margin-right: 15px;
   }
   
-  .todos_circulo:hover{
+.todos_circulo:hover{
     border-color: #007bff; 
     background-color: #e6f7ff; 
     transform: scale(1.05);
   }
 
 
-  /*Estilos para cada boton de emocion*/
+  /*Estilos para cada boton de las emociones emocion*/
 
  #emojiFeli{
     font-size: 30px;
@@ -286,41 +292,13 @@ body{
    border:1px solid #fbfbfb; 
 }
 
-
-#frase_contenedor{/*Estilo del contenedor de la frase*/
-    border-radius:10px; 
-    border: 2px solid #d2aba7;
-    box-shadow:15px 19px 16px #0c0d1114; 
-    padding:25px; 
-    color: #b88580;
-    background-color: #ffff;
-    width: 80%;
-    height: 30px;
-    margin-top: 13%;
-    margin-left: 3%;
+/*Para mensaje que aparece despues de enviar la emocion*/
+.mensajeExito{
+   font-family: "Lato", sans-serif;
+   font-weight: 300;
+   font-size: 140%;
+   margin-left: 30%;
 }
-
-#frase_contenedor h3{/*Estilo de "Frase" de la frase*/
-    text-align: center;
-    transform: translateY(-80%);
-    font-family: "Lato", sans-serif;
-    font-size: 170%;
-    font-weight: 300;
-}
- 
-#frase{/*Estilo de la frase */
-    border-radius:18px; 
-    box-shadow:15px 19px 16px #0c0d1114; 
-    padding:25px; 
-    background-color: #ffffff;
-    width: 80%;
-    font-family: "Lato", sans-serif;
-    font-size: 120%;
-    height: 110px;
-    margin-top: 10px;
-    margin-left: 3%;
-}
-
 
  /*-- FOOTERS --*/
 

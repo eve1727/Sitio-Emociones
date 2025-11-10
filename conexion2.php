@@ -1,7 +1,7 @@
 <?php
-// Configuración de la base de datos para registro e inicio de sesion al sitio
+// Configuración de la base de datos para guardar las emociones
 $host = 'localhost';
-$dbname = 'usuarios';
+$dbname = 'Emociones';
 $username = 'evelyn';
 $password = '1234';
 
