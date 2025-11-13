@@ -1,11 +1,12 @@
 :root{
     --fondo:#f6f8fb;
     --card:#ffffff;
-    --borde:#d2aba7;
+    --borde:#a7a7a7;
     --texto:#1f2d3d;
     --texto-sec:#5a6b7b;
-    --primario:#b88580;
-    --primario-osc:#bf5c54;
+    --primario:#1f2d3d;
+    --botones:#9cbeee;
+    --primario-osc:#ca8a85;
     --ok:#2e7d32;
     --alerta:#c62828;
     --focus:#6aa9ff;
@@ -13,32 +14,71 @@
   }
   
   *{box-sizing:border-box}
-  html{font-size:16px}
+  html{
+    font-size:16px
+  }
   body{
-    margin:0; padding:24px;
     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-    line-height:1.55; color:var(--texto); background:var(--fondo);
+    line-height:1.55; 
+    color:var(--texto); 
+    background:var(--fondo);
   }
   
   /* --------- Layout simple --------- */
-  .contenedor{max-width:880px; margin-top: 110px; margin-left: 20%;}
+  .contenedor{
+    max-width:880px;
+     margin-top: 110px; 
+     margin-left: 20%;
+    }
+
   .tarjeta{
-    background:var(--card); border:1px solid var(--borde);
-    border-radius:14px; box-shadow:var(--sombra); padding:22px; margin-bottom:18px;
+    background:var(--card); 
+    border:1px solid var(--borde);
+    border-radius:14px; 
+    box-shadow:var(--sombra);
+    padding:22px; 
+    margin-bottom:18px;
   }
-  .encabezado{display:flex; align-items:center; gap:12px; margin-bottom:20px}
-  .encabezado h1,.encabezado h2{margin:0; color:var(--primario)}
-  .sub{color:var(--texto-sec); margin:6px 0 0}
+
+  .encabezado{
+    display:flex; 
+    align-items:center; 
+    gap:12px; 
+    margin-bottom:20px
+  }
+  .encabezado h1,.encabezado h2{
+    margin:0; 
+    color:var(--primario)
+  }
+
+  .sub{
+    color:var(--texto-sec); 
+    margin:6px 0 0
+  }
   
   /* --------- Formularios --------- */
-  form{display:grid; gap:14px; margin-top:10px}
-  .campo{display:grid; gap:8px}
-  label{font-weight:600}
+  form{
+    display:grid; 
+    gap:14px; 
+    margin-top:10px
+  }
+  .campo{
+    display:grid; 
+    gap:8px
+  }
+
+  label{
+    font-weight:600
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="password"]{
-    padding:10px 12px; border:1px solid var(--borde); border-radius:10px;
-    background:#fff; color:var(--texto);
+    padding:10px 12px;
+    border:1px solid var(--borde); 
+    border-radius:10px;
+    background:#fff; 
+    color:var(--texto);
   }
   input:focus{
     outline:3px solid var(--focus);
@@ -46,33 +86,77 @@
   }
   
   /* --------- Botones --------- */
-  .barra-acciones{display:flex; gap:10px; flex-wrap:wrap}
+  .barra-acciones{
+    display:flex; 
+    gap:10px; 
+    flex-wrap:wrap
+  }
+
   .boton{
-    appearance:none; border:0; cursor:pointer;
-    padding:10px 14px; border-radius:10px; font-weight:100;
-    background:var(--primario); color:#fff; box-shadow:var(--sombra);
+    appearance:none; 
+    border: 0.5px solid black; 
+    cursor:pointer;
+    padding:10px 14px; 
+    height: 50px;
+    border-radius:10px; 
+    font-weight:100;
+    background:#fff; 
+    color:#0b0b0b; 
+    box-shadow:var(--sombra);
   }
-  .boton:hover{background:var(--primario-osc)}
+
+  .boton:hover{
+    background:#97afd0;
+    border: 1px solid #0b0b0b;
+  }
+
   .boton-sec{
-    background:#EBC7C4; color:var(--texto); text-decoration:none;
+    background:#cfddf1; 
+    color:var(--texto); 
+    text-decoration:none;
   }
-  .boton-sec:hover{background:#e5ebf3}
+
+  .boton-sec:hover{
+    background:#e2e8ef
+  }
   
   /* --------- Mensajes --------- */
   .mensaje{
-    border:1px solid var(--borde); background:#f3f7ff; color:#073b74;
-    padding:10px 12px; border-radius:10px;
+    border:1px solid var(--borde); 
+    background:#f3f7ff; 
+    color:#073b74;
+    padding:10px 12px; 
+    border-radius:10px;
   }
-  .mensaje--ok{background:#eef8f0; color:var(--ok)}
-  .mensaje--error{background:#fdeeee; color:var(--alerta)}
+  .mensaje--ok{
+    background:#eef8f0; 
+    color:var(--ok)
+  }
+
+  .mensaje--error{
+    background:#fdeeee; 
+    color:var(--alerta)
+  }
   
   /* --------- Tablas --------- */
   .tabla{
-    width:100%; border-collapse:separate; border-spacing:0; background:#fff;
-    border:0.5px solid var(--borde); border-radius:12px; overflow:hidden;
+    width:100%; 
+    border-collapse:separate; 
+    border-spacing:0; 
+    background:#fff;
+    border:0.5px solid var(--borde); 
+    border-radius:12px; 
+    overflow:hidden;
   }
-  .tabla th,.tabla td{padding:12px 14px; text-align:left}
-  .tabla thead th{background:#f0f4ff; color:#002b67; font-weight:700}
+
+  .tabla th,.tabla td{
+    padding:12px 14px; 
+    text-align:left
+  }
+  .tabla thead th{
+    background:#f0f4ff; 
+    color:#002b67; 
+    font-weight:700}
   .tabla tbody tr+tr td{border-top:1px solid var(--borde)}
   .filas-acciones a{margin-right:10px}
   
@@ -83,18 +167,31 @@
   
   /*-- FOOTERS --*/
 
+  #ola{
+    margin-top: 8%;
+  }
+
   .foot{
-    background-color: #ece5e5;
+    background-color: #a2d9ff;
     padding: 10px;
-    margin-top: 10%;
+    margin-top: -5%;
     height: 200px;
     margin-bottom: -10%;
+    height: 350px;
   }
 
   #seccion1{
     display: inline-block;
     margin-right: 40%;
-    margin-left: 2%;
+    margin-left: 5%;
+  }
+
+  #seccion1 h2{
+    font-size: 180%;
+  }
+
+  #seccion1 p{
+    font-size: 120%;
     text-align: left;
   }
 
@@ -102,18 +199,20 @@
     display: flex;
   }
 
-  .espacio{
-    transform: translateX(20px);
-  }
-
-  .espacio2{
-    transform: translateX(60px);
+  #seccion3{
+    display: flex;
+    margin-left: -5%;
+    text-align: left;
+    width: 900px;
+   margin-right: 5%;
   }
   
-
-  #privacidad{
-    display: inline-table;
+  .espacio{
+    margin-right: 10%;
+    margin-left: 5%;
   }
+
+
 
   .footer_links{
     text-decoration: none;
@@ -122,5 +221,5 @@
   }
 
   .footer_links:hover{
-     color: #bf5c54;
+     color: #e3e3e3;
   }

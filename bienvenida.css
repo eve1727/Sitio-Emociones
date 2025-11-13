@@ -1,0 +1,31 @@
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #f6f8fb;
+}
+
+.botones{
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-top: 35px;
+    
+}
+
+.nav{
+    font-size: 140%;
+    margin-left: 20px;
+}
+
+.nav a{
+    text-decoration: none;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.nav a:hover{
+    color: #007bff;
+    text-decoration: underline;
+}
+

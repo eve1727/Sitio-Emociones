@@ -181,16 +181,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div><!--Fin contenedor de  las dos partes-->
 
 </body>
+<footer><!--Agregamos nuestro footer-->
 
-<footer>
-  <div class="foot"><!--Contenedor del footer-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="ola"><path fill="#a2d9ff" fill-opacity="4" d="M0,64L40,80C80,96,160,128,240,128C320,128,400,96,480,112C560,128,640,192,720,197.3C800,203,880,149,960,112C1040,75,1120,53,1200,64C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+
+  <div class="foot">
   <div id="seccion2"><!--Contenedor de las secciones del footer-->
-    <div id="seccion1"><!--Contenedor de la primera seccion-->
-       <h2>MyEmotions</h2>
+    <div id="seccion1">
+       <h2>El Faro Emocional</h2>
        <p>Creado para poder acompañarte día a día <br>y tener un registro de tus emociones</p>
     </div>
     
 
+    <div id="seccion3">
       <div>
         <h3>Privacidad</h3>
         <div id="privacidad">
@@ -200,15 +203,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       </div>
 
       <div class="espacio">
-        <h3 ><a href="inicio_sesion.php" class="footer_links">Inicia Sesion</a></h3>
+        <h3 ><a href="inicio_sesion.php" class="footer_links">Sobre nosotras</a></h3>
       </div>
 
       <div class="espacio2">
         <h3>Nuestras redes</h3>
            <p>Instagram</p>
       </div>
-        
-    </div>
+        </div><!--Fin de la seccion3-->
+    </div><!--Fin de la seccion2-->
   </div>
-</footer> 
+</footer>
 </html>
