@@ -97,10 +97,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <!-- Navegación -->
       <p class="nav">
-        <a href="registrar.php">Registrar</a>
-        <a href="inicio_sesion.php">Iniciar sesión</a>
-        <a href="privado.php">Privado</a>
-        <a href="salir.php">Salir</a>
+        <a href="registrar.php">Registrarse</a>
+        <a href="inicio_sesion.php">Regresar</a>
         <a href="index.php">Inicio</a>
       </p>
     </div>

@@ -13,18 +13,36 @@
 </head>
 <body>
 
-<header id ="inicio">
-<p><!--Partes a las que el usuario puede ir-->
-        <a href="registrar.php">Registrarse</a>
-        <a href="inicio_sesion.php">Iniciar sesión</a>
+<header id="barra">
+   <header id ="inicio">
+      <p><!--Partes a las que el usuario puede ir-->
         <a href="privado.php">Privado</a>
+        <li style="transform: translateY(-175%) translateX(-0.5%);">
+          <a href="inicio_sesion" id="cerrar">Cerrar sesión</a>
+        </li>
       </p>
    </header>
 
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
     <header id="encabezado">
         <h2>¡Hola! <br>
-            Bienvenid@ a El Faro Emocional</h2>
+            Bienvenida a El Faro Emocional</h2>
+
+            <img src="img/nube.png" id="nube">
     </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <hr id="hr">
 
 <div id="dos_partes"><!-- Contenedor para poner frase a un lado de elegir emocion-->

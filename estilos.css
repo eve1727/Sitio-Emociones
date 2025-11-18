@@ -38,33 +38,36 @@
     box-shadow:var(--sombra);
     padding:22px; 
     margin-bottom:18px;
+    height: 560px;
+    width: 90%;
+    margin-left: 15px;
   }
 
   .encabezado{
     display:flex; 
     align-items:center; 
-    gap:12px; 
     margin-bottom:20px
   }
   .encabezado h1,.encabezado h2{
-    margin:0; 
-    color:var(--primario)
+    color:var(--primario);
+    margin-left: 80px;
   }
 
   .sub{
     color:var(--texto-sec); 
-    margin:6px 0 0
+    margin-left: 80px;
   }
   
   /* --------- Formularios --------- */
   form{
     display:grid; 
     gap:14px; 
-    margin-top:10px
+    margin-top:10px;
+    margin-left: 80px;
   }
   .campo{
     display:grid; 
-    gap:8px
+    gap:5px
   }
 
   label{
@@ -78,6 +81,7 @@
     border:1px solid var(--borde); 
     border-radius:10px;
     background:#fff; 
+    width: 80%;
     color:var(--texto);
   }
   input:focus{
@@ -103,11 +107,12 @@
     background:#fff; 
     color:#0b0b0b; 
     box-shadow:var(--sombra);
+    transition: all 0.3s;
   }
 
   .boton:hover{
-    background:#97afd0;
-    border: 1px solid #0b0b0b;
+    background:#c5d5e3;
+    border:1px solid #fbfbfb; 
   }
 
   .boton-sec{
@@ -153,17 +158,45 @@
     padding:12px 14px; 
     text-align:left
   }
+
   .tabla thead th{
     background:#f0f4ff; 
     color:#002b67; 
-    font-weight:700}
-  .tabla tbody tr+tr td{border-top:1px solid var(--borde)}
-  .filas-acciones a{margin-right:10px}
+    font-weight:700;
+  }
+
+  .tabla tbody tr+tr td{
+    border-top:1px solid var(--borde);
+  }
+
+  .filas-acciones a{
+    margin-right:10px;
+  }
   
   /* --------- Utilidades --------- */
-  .hr{height:1px; background:var(--borde); border:0; margin:14px 0}
-  .nav a{margin-right:12px; color:var(--primario); text-decoration:none; font-weight:600}
-  .nav a:hover{text-decoration:underline}
+  .hr{
+    height:1px; 
+    background:var(--borde);
+    border:0; 
+    margin:20px 0;
+  }
+
+  .nav{
+    margin-left: 210px;
+    transform: translateY(15%);
+  }
+  .nav a{
+    margin-right:12px; 
+    color:var(--primario); 
+    text-decoration:none; 
+    font-weight:600;
+    font-size: 110%;
+  }
+
+  .nav a:hover{
+    text-decoration:underline;
+  }
+
   
   /*-- FOOTERS --*/
 

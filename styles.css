@@ -1,45 +1,78 @@
 body{
-    padding: 5px;
     background-color: #f6f8fb;
 }
 
+/*-- Barra --*/
+
 #inicio p{/*Posicionamiento de barra de navegacion*/
-    margin-left: 60%;
-    margin-top: 5%;
+   display: flex;
+   position: relative;
+   z-index: 10;
+   margin-left: 70%;
 }
 
-#proceso{
-      margin-left: 45%;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-      color: #bf5c54;
 
-}
-
-#inicio p a{/*Estilos de los links de la barra de navegacion*/
-    margin-top: 15px;
-    font-weight: 300;
-    margin-left: 40px;
-    font-size: 170%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    transition: all 0.5s;
-    color: #000000;
-    text-decoration: none;
-}
-
-#inicio p a:hover {
-    color: #e89189;
-    cursor: pointer;
+  #barra{
+   background-color: #a2d9ff;
+   height: 7.5%;
+   text-align: center;
+   position: fixed;/*hace que la barra se quede estatica*/
+   bottom: 0%;
+   right: 0%;
+   left: 0%;
+   top: 0.1%;
+   z-index: 9; /*Hace que muestre la barra arriba de cualquier elemento*/
+   opacity: 100%;
  }
 
+
+#inicio p a{/*Estilos de los links de la barra de navegacion*/
+    margin-top: 5px;
+    font-weight: 300;
+    margin-left: 130px;
+    font-size: 170%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+#inicio p a:hover { 
+   color: white;
+ }
+
+ #cerrar{
+   text-decoration: none;
+   font-weight: 300;
+   font-size: 150%;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #000000;
+   margin-left: 85%;
+   border: solid #f7f8fa;
+   padding: 10px;
+   background-color: #f7f8fa;
+   border-radius: 35px;
+ }
+
+
+ #cerrar:hover{
+   color: rgb(32, 30, 30);
+   height: 250px;
+   background-color: #fbf8cb;
+   border: solid #dededd;
+}
 
 #encabezado{/*Estilo del encabezado*/
     background-size: cover;
     background-position-y:70%; 
     height:300px;
     opacity: 95%;
-    transform: translateY(2.5%);
+    transform: translateY(10.5%);
     z-index: 100;
+    display: flex;
 }
 
 #encabezado h2{/*Estilo del texto del encabezado*/
@@ -50,11 +83,19 @@ body{
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#nube{
+   height: 270px;
+   margin-left: 23%;
+   opacity: 80%;
+}
+
 #hr{
    margin-top: 1%;
 }
 
-
+#dos_partes{
+   margin-top: 45px;
+}
  #contenedor{/*Estilo del contenedor principal de elegir emoción*/
     border-radius:18px; 
     box-shadow:15px 19px 16px #0c0d1114; 
@@ -297,7 +338,11 @@ body{
    font-family: "Lato", sans-serif;
    font-weight: 300;
    font-size: 140%;
-   margin-left: 30%;
+   margin-left: 29%;
+   background-color: #aeecb0;
+  padding: 5px;
+  width: 300px;
+  border-radius: 15px;
 }
 
  /*-- FOOTERS --*/
