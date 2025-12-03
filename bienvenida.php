@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenida</title>
-    <link rel="stylesheet" type="text/css" href="bienvenida.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<div class="botones">
-   <p class="nav">
-        <a href="registrar.php">Registrate</a>
-
-  
-        <!--estilo de los campos del formulario-->
-        
-<?php
+   <!--PHP del registro de usuario-->     
+   <?php
 
 require_once "conexion.php"; //Conectas a la base de datos
 
@@ -60,14 +40,41 @@ if ($prepare->execute()) {
 }
 }
    }   ?>
+ 
 
-  <div class="contenedor">
-    <div class="tarjeta">
-      <div class="encabezado">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" type="text/css" href="bienvenida.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="botones">
+   <p class="nav">
+
+ <a href="#" id="abrirModal">Registrate</a>
+
+    <div id="miModal" class="modal"><!-- Contenedor del modal que pone el fondo negro-->
+        <div class="modal_contenido"><!-- Contenedor que tiene el contenido del modal-->
+
+        <span class="cerrar-modal">&times;</span><!-- Boton para cerrar el modal-->
+        
+             <img src="uno.jpg" id="modal_imagen">
+
+        <div class="elementos_modal"><!-- Contenedor de los elementos del modal-->
+
+
         <h1>Registro de usuario</h1>
-      </div>
 
-      <p class="sub">Crea una cuenta para acceder al sitio.</p>
+      <p>Crea una cuenta para acceder al sitio.</p>
 
       <!-- Mensaje -->
       <?php if ($mensaje !== ""): ?>
@@ -75,7 +82,7 @@ if ($prepare->execute()) {
       <?php endif; ?>
 
       <!-- Formulario -->
-      <form method="post" action="registrar.php" novalidate>
+      <form method="post">
         <div class="campo"><!--estilo de los campos del formulario-->
           <label for="nombre">Nombre</label>
           <input id="nombre" name="nombre" type="text" required maxlength="100" autocomplete="name">
@@ -104,14 +111,16 @@ if ($prepare->execute()) {
         <a href="bienvenida.php">Regresar</a>
         <a href="index.php">Inicio</a>
       </p>
-    </div><!--fin del div de la clase tarjeta-->
-  </div>
+
+      </div>
+    </div>
+   
+    </div>
+
+   </div><!-- Fin de la modal para mostrar el registro de usuario-->
 
 
-        <a href="inicio_sesion.php">Inicia sesión</a>
-      </p>
-   </div>
-
+   
    <div>
       <header id="encabezado">
          <h2>¡Hola!</h2>
@@ -181,7 +190,7 @@ if ($prepare->execute()) {
           </div>
       </div>
    </div>
-</body>
- <!--Enlazamos el javascript-->
+    <!--Enlazamos el javascript-->
  <script src="bienvenida.js"></script>
+</body>
 </html>

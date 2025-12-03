@@ -259,3 +259,125 @@ body{
     margin-left: -25.5%;
     margin-bottom: 35px;
 }
+
+/* Contenedor de la ventana emergente */
+.modal {
+    display: none; /* Oculta la ventana emergente por defecto */
+    position: fixed; /* Posición fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%; /* Cubre toda la altura de la pantalla */
+    overflow: auto; /* Agrega desplazamiento si el contenido es demasiado grande */
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+/* ====== Estilos para el contenido de la ventana emergente ====== */
+
+/* Contenedor del contenido dentro del modal */
+.modal_contenido {
+    background-color: #fff; /* Fondo blanco */
+    margin: 9% auto; /* Centra verticalmente el modal */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde gris oscuro */
+    width: 55%; /* Ancho del modal (80% del ancho de la pantalla) */
+    height: 560px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra para resaltar la ventana */
+}
+
+/* ====== Estilos para el botón de cerrar ====== */
+
+/* Botón "X" para cerrar la ventana */
+.cerrar-modal {
+    color: #aaa; /* Color gris claro */
+    float: right; /* Lo posiciona a la derecha */
+    font-size: 28px; /* Tamaño de la "X" */
+    font-weight: bold; /* Hace el texto más grueso */
+}
+
+/* Cambio de color cuando se pasa el mouse sobre el botón de cerrar */
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black; /* Cambia el color a negro */
+    text-decoration: none; /* Elimina subrayado */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+#modal_imagen{
+    height: 600px;
+    transform: translateY(-20px) translateX(-20px);
+    border-radius: 5px;
+}
+.elementos_modal{
+    margin-left: 400px;
+}
+
+.elementos_modal h1{
+    font-size: 220%;
+    font-weight: 800;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    color: #1f2937;
+    margin-top: -570px;
+    margin-left: -30px;
+}
+
+.elementos_modal p{
+    font-size: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #4b5563;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.campo{
+    display:grid; 
+    gap:5px
+  }
+
+  .elementos_modal label{
+    font-weight:600;
+    font-family: "Lato", sans-serif;
+  }
+
+  .elementos_modal input[type="text"],
+  .elementos_modal input[type="email"],
+  .elementos_modal input[type="password"]{
+    padding:15px 15px;
+    border:1px solid #a7a7a7; 
+    border-radius:10px;
+    background:#fff; 
+    width: 80%;
+    color: #4b5563;
+    margin-bottom: 5px;
+  }
+  .elementos_modal input:focus{
+    outline:2px solid #6aa9ff;
+    border-color: #3b82f6;
+  }
+  
+  .boton{
+    border: 0.5px solid black; 
+    cursor:pointer;
+    padding:10px 10px; 
+    height: 50px;
+    border-radius:10px; 
+    font-weight:200;
+    background:#fff; 
+    color:#0b0b0b; 
+    box-shadow:var(--sombra);
+    transition: all 0.3s;
+    width: 140px;
+    margin-top: 15px;
+    margin-left: 110px;
+    margin-bottom: 15px;
+  }
+
+  .boton:hover{
+    background:#c5d5e3;
+    border:1px solid #fbfbfb; 
+  }
+
