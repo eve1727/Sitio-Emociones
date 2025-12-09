@@ -121,7 +121,7 @@ if ($prepare->execute()) {
                   </p>
 
                   </div>
-                  </div>
+               </div>
 
               </div><!--Fin de la modal-->
     </div><!--Fin de botones-->
